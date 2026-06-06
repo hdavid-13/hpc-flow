@@ -1,0 +1,317 @@
+<function_calls>
+<invoke name="artifacts">
+<parameter name="command">create</parameter>
+<parameter name="id">hpc_flow_presentation</parameter>
+<parameter name="type">application/code</parameter>
+<parameter name="language">html</parameter>
+<parameter name="title">hpc-flow — Dossier Partenaires WeasyPrint</parameter>
+<parameter name="content"><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 8.5pt;
+  color: #1a1a2e;
+  background: white;
+  line-height: 1.5;
+}
+
+@page { size: A4; margin: 0; }
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 14mm 16mm 18mm;
+  page-break-after: always;
+  position: relative;
+}
+.page:last-child { page-break-after: avoid; }
+
+/* VARIABLES */
+:root {
+  --blue:   #1e3a5f;
+  --accent: #2d6be4;
+  --light:  #f4f7fb;
+  --border: #dde3ee;
+  --muted:  #6b7a99;
+  --green:  #1a7f5a;
+  --orange: #c85c00;
+}
+
+/* HEADER */
+.ph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5pt solid var(--blue);
+  padding-bottom: 4mm;
+  margin-bottom: 7mm;
+}
+.logo { font-size: 11pt; font-weight: 700; color: var(--blue); }
+.logo span { color: var(--accent); }
+.ph-label { font-size: 7pt; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+/* FOOTER */
+.pf {
+  position: absolute;
+  bottom: 8mm;
+  left: 16mm;
+  right: 16mm;
+  border-top: 0.5pt solid var(--border);
+  padding-top: 2.5mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7pt;
+  color: var(--muted);
+}
+
+/* TYPO */
+h2 { font-size: 11pt; font-weight: 700; color: var(--blue); margin-bottom: 5mm; }
+h3 { font-size: 9pt; font-weight: 600; color: var(--blue); margin-bottom: 2.5mm; }
+h4 { font-size: 8.5pt; font-weight: 600; color: #1a1a2e; margin-bottom: 1.5mm; }
+p  { margin-bottom: 2.5mm; }
+
+/* GRID */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3.5mm; }
+
+/* CARD */
+.card {
+  background: var(--light);
+  border: 0.5pt solid var(--border);
+  border-radius: 3pt;
+  padding: 4.5mm;
+  margin-bottom: 3.5mm;
+}
+.card-accent { border-left: 3pt solid var(--accent); }
+.card-green  { border-left: 3pt solid var(--green); }
+.card-orange { border-left: 3pt solid var(--orange); }
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  font-size: 6.5pt;
+  font-weight: 600;
+  padding: 1pt 5pt;
+  border-radius: 2pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.b-blue   { background: #dbeafe; color: var(--accent); }
+.b-green  { background: #d1fae5; color: var(--green); }
+.b-orange { background: #ffedd5; color: var(--orange); }
+.b-gray   { background: #e5e7eb; color: #6b7280; }
+
+/* TERMINAL */
+.term {
+  background: #0d1117;
+  border-radius: 3pt;
+  padding: 4mm 5mm;
+  font-family: 'Courier New', monospace;
+  font-size: 7.5pt;
+  color: #c9d1d9;
+  line-height: 1.7;
+}
+.term .pr { color: #58a6ff; }
+.term .cm { color: #79c0ff; }
+.term .ot { color: #8b949e; }
+.term .ok { color: #56d364; }
+
+/* STATS */
+.stat-row { display: flex; gap: 3.5mm; margin-bottom: 5mm; }
+.stat-box {
+  flex: 1;
+  text-align: center;
+  background: var(--blue);
+  color: white;
+  border-radius: 3pt;
+  padding: 4mm 2mm;
+}
+.stat-box .n { font-size: 15pt; font-weight: 700; line-height: 1; }
+.stat-box .l { font-size: 6.5pt; color: rgba(255,255,255,0.65); margin-top: 1mm; }
+
+/* TABLE */
+table { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
+thead tr { background: var(--blue); color: white; }
+thead th { padding: 2.5mm 3.5mm; text-align: left; font-weight: 500; }
+tbody tr:nth-child(even) { background: var(--light); }
+tbody td { padding: 2.5mm 3.5mm; border-bottom: 0.3pt solid var(--border); vertical-align: top; }
+
+/* FLOW */
+.flow { display: flex; align-items: center; gap: 1.5mm; margin: 3mm 0; }
+.fb {
+  flex: 1;
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 3mm 1.5mm;
+  border-radius: 2.5pt;
+  font-size: 7pt;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.fb.lt {
+  background: var(--light);
+  color: var(--blue);
+  border: 0.5pt solid var(--border);
+}
+.fa { font-size: 9pt; color: var(--muted); flex-shrink: 0; }
+
+/* ARCH */
+.arch { display: flex; align-items: stretch; margin-bottom: 2mm; }
+.arch-lbl {
+  width: 26mm;
+  font-size: 6.5pt;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  padding-right: 3mm;
+}
+.arch-blocks { flex: 1; display: flex; gap: 2mm; }
+.ab {
+  flex: 1;
+  padding: 3mm;
+  border-radius: 2.5pt;
+  font-size: 7pt;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.ab-d { background: var(--blue);  color: white; }
+.ab-m { background: #2d4a7a;      color: white; }
+.ab-l { background: #dbeafe;      color: var(--blue); }
+.ab-p { background: var(--light); color: #1a1a2e; border: 0.5pt solid var(--border); }
+
+/* PARTNER CARD */
+.pc { border: 0.5pt solid var(--border); border-radius: 3pt; overflow: hidden; margin-bottom: 3.5mm; }
+.pc-h { background: var(--blue); color: white; padding: 2.5mm 4mm; font-weight: 600; font-size: 8pt; display: flex; justify-content: space-between; align-items: center; }
+.pc-b { padding: 4mm; font-size: 7.5pt; }
+.pc-b li { margin-bottom: 1.5mm; padding-left: 9pt; position: relative; list-style: none; }
+.pc-b li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+
+/* NUMBERED LIST */
+.nlist { list-style: none; }
+.nlist li { display: flex; gap: 3mm; margin-bottom: 3mm; align-items: flex-start; }
+.nlist .nn {
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  width: 5mm;
+  height: 5mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6.5pt;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.5mm;
+}
+
+/* CHECKLIST */
+.ck { list-style: none; }
+.ck li { margin-bottom: 2mm; padding-left: 9pt; position: relative; font-size: 8pt; }
+.ck li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+
+/* INFO BOX */
+.ib {
+  background: #eff6ff;
+  border: 0.5pt solid #bfdbfe;
+  border-left: 3pt solid var(--accent);
+  border-radius: 3pt;
+  padding: 4mm;
+  font-size: 8pt;
+  margin-bottom: 3.5mm;
+}
+.wb {
+  background: #fff7ed;
+  border: 0.5pt solid #fed7aa;
+  border-left: 3pt solid var(--orange);
+  border-radius: 3pt;
+  padding: 4mm;
+  font-size: 8pt;
+  margin-bottom: 3.5mm;
+}
+.gb {
+  background: #f0fdf4;
+  border: 0.5pt solid #bbf7d0;
+  border-left: 3pt solid var(--green);
+  border-radius: 3pt;
+  padding: 4mm;
+  font-size: 8pt;
+  margin-bottom: 3.5mm;
+}
+
+hr { border: none; border-top: 0.5pt solid var(--border); margin: 4mm 0; }
+
+/* PHASE */
+.phase { display: flex; gap: 3.5mm; margin-bottom: 4mm; }
+.ph-num {
+  width: 7mm; height: 7mm;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 8.5pt;
+  flex-shrink: 0; margin-top: 0.5mm;
+}
+.ph-body { flex: 1; }
+
+/* MANAGED SERVICE LAYERS */
+.ms-layer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5mm;
+}
+.ms-tag {
+  width: 22mm;
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.ms-block {
+  flex: 1;
+  padding: 2.5mm 4mm;
+  border-radius: 2.5pt;
+  font-size: 7.5pt;
+  font-weight: 500;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ PAGE 1 — COUVERTURE ═══════════════════ -->
+<div class="page" style="padding-top: 0;">
+
+  <div style="background: var(--blue); margin: 0 -16mm 10mm; padding: 12mm 16mm 10mm; display:flex; justify-content:space-between; align-items:flex-end;">
+    <div style="color:white;">
+      <div style="font-size:7pt; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:3mm;">Dossier de partenariat — Confidentiel</div>
+      <div style="font-size:26pt; font-weight:700; letter-spacing:-1px; line-height:1;">hpc<span style="color:#5b9cf6;">-flow</span></div>
+      <div style="font-size:9pt; color:rgba(255,255,255,0.7); margin-top:3mm; max-width:120mm;">Calcul scientifique haute performance accessible en une commande — sans infrastructure à gérer.</div>
+    </div>
+    <div style="text-align:right; color:rgba(255,255,255,0.4); font-size:7pt; line-height:1.6;">
+      <div>Version 1.0</div>
+      <div>2025</div>
+      <div style="margin-top:2mm;">Open Source · MIT License</div>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="n">1</div><div class="l">commande pour lancer un job</div></div>
+    <div class="stat-box"><div class="n">0</div><div class="l">VM ou Docker à configurer</div></div>
+    <div class="stat-box"><div class="n">100%</div><div class="l">open source (MIT)</div></div>
+    <div class="stat-box"><div class="n">Multi</div><div class="l">backends : Akash, cloud, local</div></div>
+  </div>
+
+  <div class="term" style="margin-bottom:6mm;">
+    <div><span class="pr">$</span> <span class="cm">hpc-flow run blast --input sequences.fasta
