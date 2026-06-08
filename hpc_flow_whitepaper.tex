@@ -62,7 +62,7 @@
 % ============================================================
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\textbf{HPC Flow}}
+\fancyhead[L]{\textbf{Zest}}
 \fancyhead[R]{\small White Paper v1.0}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
@@ -110,7 +110,7 @@
 	\vspace*{2cm}
 	
 	\begin{center}
-		{\Huge\color{darkblue}\textbf{HPC Flow}}
+		{\Huge\color{darkblue}\textbf{Zest}}
 		\vspace{0.5cm}
 		
 		{\Large\color{darkgray}Calcul scientifique simplifié sur infrastructure distribuée}
@@ -149,7 +149,7 @@
 	% ============================================================
 	\section{Résumé Exécutif}
 	
-	\highlight{HPC Flow} est un outil CLI open-source conçu pour simplifier l'exécution de charges de travail scientifiques sur infrastructure distribuée (Akash Network, HPC traditionnels, cloud).
+	\highlight{Zest} est un outil CLI open-source conçu pour simplifier l'exécution de charges de travail scientifiques sur infrastructure distribuée (Akash Network, HPC traditionnels, cloud).
 	
 	L'objectif : \textit{éliminer la complexité} liée à la containerisation, la configuration d'environnements et le transfert de fichiers.
 	
@@ -184,9 +184,9 @@
 	\begin{itemize}
 		\item \textbf{Accélération de la recherche} : Moins de temps sur l'infra, plus sur la science. Passer d'une idée à résultats en minutes, pas en semaines.
 		\item \textbf{Reproductibilité améliorée} : Environnements isolés et versionnés garantissent que les mêmes résultats sont obtenus partout, par n'importe qui.
-		\item \textbf{Collaboration facilitée} : Partager une commande \texttt{hpc-flow run} est plus simple que de documenter une infrastructure entière.
+		\item \textbf{Collaboration facilitée} : Partager une commande \texttt{zest run} est plus simple que de documenter une infrastructure entière.
 		\item \textbf{Accessibilité} : Aucune expertise DevOps requise. Les scientifiques restent scientifiques.
-		\item \textbf{Coûts réduits} : Paiement à l'usage sur Akash Network = \textit{jusqu'à 10x moins cher} qu'AWS ou GCP pour le calcul intensif.
+		\item \textbf{Coûts réduits} : Paiement à l'usage sur Akash Network = \textit{jusqu'à 3x moins cher} qu'AWS ou GCP pour le calcul intensif.
 	\end{itemize}
 	
 	\subsubsection{Pour les entreprises}
@@ -201,7 +201,7 @@
 	
 	\subsection{Vers une Science Ouverte et Inclusive}
 	
-	HPC Flow adresse un enjeu critique de l'équité scientifique mondiale : \textit{l'accès au calcul de haute performance}.
+	Zest adresse un enjeu critique de l'équité scientifique mondiale : \textit{l'accès au calcul de haute performance}.
 	
 	\begin{itemize}
 		\item \textbf{Démocratisation du calcul} : Chercheurs dans les pays en développement peuvent accéder à infrastructure world-class sans investissement capital massif.
@@ -231,7 +231,7 @@
 			
 			% COUCHE 1 : USER
 			\draw[darkblue, fill=white, line width=2.5] (-2, 7.5) rectangle (10, 8.8);
-			\node[darkblue, font=\bfseries, font=\Large] at (4, 8.2) {1. Utilisateur : hpc run [commande]};
+			\node[darkblue, font=\bfseries, font=\Large] at (4, 8.2) {1. Utilisateur : zest run [commande]};
 			
 			% FLECHE
 			\draw[->, line width=2, darkblue] (4, 7.5) -- (4, 6.8);
@@ -260,7 +260,7 @@
 	Interface utilisateur minimaliste. L'utilisateur lance une commande simple :
 	
 	\begin{lstlisting}
-		hpc run vsearch \
+		zest run vsearch \
 		--input reads.fasta \
 		--id 0.97 \
 		--output centroids.fasta \
@@ -272,7 +272,7 @@
 		\item Parse les arguments
 		\item Vérifie que le fichier \texttt{reads.fasta} existe localement
 		\item Consulte le Tool Registry pour trouver \texttt{vsearch}
-		\item Construit une specification de job (JobSpec) en format structurée
+		\item Construit une spécification de job (JobSpec) en format structurée
 	\end{itemize}
 	
 	\textbf{Pas de Docker, pas de VM, pas de connaissance infrastructure requise.}
@@ -295,11 +295,11 @@
 		memory: 8Gi
 	\end{lstlisting}
 	
-	Chacun peut contribuer de nouveaux outils (bioinformatique, geospatial, etc.).
+	Chacun peut contribuer a de nouveaux outils (bioinformatique, geospatial, etc.).
 	
 	\subsubsection{3. JobRunner Interface}
 	
-	Abstraction generique permettant de soutenir différents backends sans changer le code CLI.
+	Abstraction générique permettant de soutenir différents backends sans changer le code CLI.
 	
 	\begin{lstlisting}
 		interface JobRunner:
@@ -320,7 +320,7 @@
 		\item Detruit le deployment
 	\end{itemize}
 	
-	\textbf{Phase 2+ :} Support AWS, GCP, Slurm
+	\textbf{Phase 2+ :} Support AWS, GCP, OVH, Slurm
 	\begin{itemize}
 		\item AWSJobRunner : utilise Lambda ou EC2
 		\item GCPJobRunner : utilise Cloud Run ou Compute Engine
@@ -332,7 +332,7 @@
 	Pour les scientifiques avec pipelines spécifiques :
 	
 	\begin{lstlisting}
-		hpc run-script mon_analyse.py \
+		zest run-script mon_analyse.py \
 		--runtime python:3.11 \
 		--input data.csv \
 		--output result.html \
@@ -372,7 +372,7 @@
 		\item \textbf{Cleanup} : Destruction du deployment
 	\end{enumerate}
 	
-	\textbf{Duree totale :} Quelques secondes (provisioning) + temps calcul + quelques secondes (download).
+	\textbf{Durée totale :} Quelques secondes (provisioning) + temps calcul + quelques secondes (download).
 	
 	\newpage
 	
@@ -385,10 +385,10 @@
 	
 	\subsubsection{Analyse sequences (CNES, Universites)}
 	
-	Chercheurs en biologie evolutive nécessitent clustering de milliers de sequences ADN.
+	Chercheurs en biologie evolutive nécessitent clustering de milliers de séquences ADN.
 	
 	\begin{lstlisting}
-		hpc run vsearch \
+		zest run vsearch \
 		--input metagenome_1M_reads.fasta \
 		--id 0.97 \
 		--threads 16 \
@@ -401,7 +401,7 @@
 	\subsubsection{BLAST / alignment (Biotech, Universite)}
 	
 	\begin{lstlisting}
-		hpc run blast \
+		zest run blast \
 		--query proteins.fasta \
 		--db nr \
 		--output results.tsv \
@@ -415,7 +415,7 @@
 	Calcul de pentes, d'exposition, d'indices de vegetation sur images satellites.
 	
 	\begin{lstlisting}
-		hpc run geoprocess \
+		zest run geoprocess \
 		--input dem_region.tif \
 		--operation slope \
 		--output slope_map.tif \
@@ -431,14 +431,14 @@
 	Chercheur avec pipeline specifique (combinaison outils maison + libs standard).
 	
 	\begin{lstlisting}
-		hpc run-script analyse_propriete.py \
+		zest run-script analyse_propriete.py \
 		--runtime python:3.11 \
 		--input data_confidentiel.csv \
 		--output rapport.html \
 		--cloud akash
 	\end{lstlisting}
 	
-	Fichier requirements.txt est telecharge automatiquement.
+	Fichier requirements.txt est télécharge automatiquement.
 	
 	\newpage
 	
@@ -464,7 +464,7 @@
 	
 	\subsection{Pourquoi Akash Network ?}
 	
-	Akash Network est choisi comme \textbf{premier backend} pour HPC Flow pour plusieurs raisons strategiques :
+	Akash Network est choisi comme \textbf{premier backend} pour Zest pour plusieurs raisons strategiques :
 	
 	\subsubsection{Avantages distinctifs}
 	
@@ -485,19 +485,19 @@
 		\caption{Comparaison Akash vs cloud centralisé}
 	\end{table}
 	
-	\paragraph{1. Decentralisation et Souveraineté}
-	Akash est une blockchain decentralisée. Aucun acteur unique ne controle l'infrastructure. Ideal pour :
+	\paragraph{1. Décentralisation et Souveraineté}
+	Akash est une blockchain decentralisée. Aucun acteur unique ne controle l'infrastructure. Idéal pour :
 	\begin{itemize}
-		\item CNES : pas de dependance geopolitique pour donnees spatiales
-		\item CMA CGM : donnees logistiques sensibles non centralisees
+		\item CNES : pas de dépendance geopolitique pour donnees spatiales
+		\item CMA CGM : données logistiques sensibles non centralisées
 		\item Universités : data governance flexible
 	\end{itemize}
 	
 	\paragraph{2. Economies d'echelle}
-	Prix \textbf{60-80\% moins chers} que AWS/GCP grace au modele P2P. Les fournisseurs (providers) Akash optimisent leurs couts.
+	Prix \textbf{60-80\% moins chers} que AWS/GCP grâce au modele P2P. Les fournisseurs (providers) Akash optimisent leurs coûts.
 	
 	\paragraph{3. Absence de lock-in}
-	Architecture multi-backend permet switch vers autre cloud sans changer code utilisateur. Leverage concurrentiel durable.
+	Architecture multi-backend permet switch vers autre cloud sans changer de code utilisateur. Levier concurrentiel durable.
 	
 	\paragraph{4. Marche ouvert}
 	Providers multiples (node operators) enchérissent pour jobs. Transparence des prix. Pas de tarification captive.
@@ -507,48 +507,73 @@
 	\subsubsection{Limitations presentes}
 	
 	\begin{itemize}
-		\item \textbf{Maturite reseau} : Variabilite de disponibilite compute. Certains providers peuvent etre offline.
-		\item \textbf{Offre limitee compute} : Moins de GPU haute performance que AWS. Mieux adapte a CPU/GPU standard.
-		\item \textbf{Stockage objet} : Pas d'equivalent S3 natif. Fichiers volumineux requierent up/download.
-		\item \textbf{Ecosystem outillage} : Outils monitoring et observabilite moins matures que AWS CloudWatch.
-		\item \textbf{Support technique} : Communaute emergente, moins de support enterprise.
+		\item \textbf{Maturité réseau} : Variabilité de disponibilité compute. Certains providers peuvent être offline.
+		\item \textbf{Offre limitée compute} : Moins de GPU haute performance que AWS. Mieux adapté a CPU/GPU standard.
+		\item \textbf{Stockage objet} : Pas d'équivalent S3 natif. Fichiers volumineux requièrent up/download.
+		\item \textbf{Ecosysteme outillage} : Outils monitoring et observabilité moins matures que AWS CloudWatch.
+		\item \textbf{Support technique} : Communauté émergente, moins de support enterprise.
 		\item \textbf{SLA garanties} : Pas de garanties SLA formelles (work in progress).
 	\end{itemize}
 	
-	\subsubsection{Developpements planifies Akash (roadmap 2024-2025)}
+\subsubsection{Développements planifiés Akash (roadmap 2025-2026)}
+
+Akash Network poursuit son évolution avec plusieurs améliorations majeures prévues :
+
+\begin{itemize}
+	\item \textbf{GPU Support amélioré} : Support avancé pour les GPU NVIDIA H100, A100 et H200 avec optimisation des performances pour l'IA/ML et le calcul intensif
 	
-	Akash Network s'améliore activement :
+	\item \textbf{Amélioration des garanties SLA} : Mise en place de garanties SLA formelles et automatisées pour une meilleure fiabilité des déploiements
 	
+	\item \textbf{Solution de stockage décentralisée} : Déploiement d'une solution de stockage compatible S3 avec intégration native à l'écosystème Akash
+	
+	\item \textbf{Écosystème des fournisseurs} : Expansion significative du nombre de providers avec des mécanismes de qualité de service renforcés et un système de réputation amélioré
+	
+	\item \textbf{Outils de monitoring et observabilité} : Tableau de bord unifié et outils avancés pour le monitoring des déploiements et des providers
+	
+	\item \textbf{Optimisation des coûts} : Réduction continue des coûts de déploiement avec des mécanismes de tarification dynamique
+\end{itemize}
+
+\subsubsection{Akash HomeNode - MVP : Vers une science participative décentralisée}
+
+Akash Network a annoncé le développement d'\textbf{Akash HomeNode}, une solution en version MVP (Minimum Viable Product) visant à démocratiser l'accès aux ressources informatiques décentralisées. Cette initiative représente une opportunité majeure pour la \textbf{science participative} en permettant :
+
+\begin{itemize}
+	\item \textbf{Calcul distribué citoyen} : Transformation des ordinateurs domestiques en nœuds de calcul contribuant à des projets scientifiques (recherche médicale, astronomie, climatologie, etc.)
+	
+	\item \textbf{Infrastructure accessible} : Réduction des barrières à l'entrée pour les chercheurs et citoyens souhaitant participer à des initiatives de calcul distribué
+	
+	\item \textbf{Applications concrètes} :
 	\begin{itemize}
-		\item \textbf{Persistent Volumes} : Stockage persistent sur deployments (Phase actuelle)
-		\item \textbf{Upgrade GPU support} : Meilleur support NVIDIA H100, A100
-		\item \textbf{Akash Console} : Dashboard web pour managment deployments
-		\item \textbf{Akash SLA Guarantees} : SLA formels en 2024-Q4
-		\item \textbf{Akash Storage} : Solution stockage decentralisee (similar S3)
-		\item \textbf{Improved Provider ecosystem} : Plus de providers, meilleure qualite service
+		\item Analyse de données biomédicales
+		\item Modélisation climatique
+		\item Recherche sur les maladies rares
+		\item Traitement de données astronomiques
 	\end{itemize}
 	
-	\keypoint{HPC Flow aligne sur evolution Akash}{Au fur et a mesure de l'evolution Akash, HPC Flow herite automatiquement des ameliorations (persistent storage, GPU avances, SLA).}
+\end{itemize}
+
+Cette approche s'inscrit dans la philosophie d'Akash Network de créer une infrastructure cloud véritablement \textbf{démocratique et décentralisée}, où chaque individu peut contribuer à l'avancement scientifique tout en bénéficiant d'une rémunération pour ses ressources partagées.
+
 	
 	\newpage
 	
-	\subsection{Strategie Multi-Cloud et Selection Backend}
+	\subsection{Stratégie Multi-Cloud et Selection Backend}
 	
-	\textbf{Vision long-terme} : HPC Flow abstrait l'infrastructure. L'utilisateur choisit backend selon besoin.
+	\textbf{Vision long-terme} : Zest abstrait l'infrastructure. L'utilisateur choisit backend selon besoin.
 	
 	\subsubsection{Selection Backend : Par commande}
 	
-	L'utilisateur specifie backend directement dans la commande :
+	L'utilisateur spécifie backend directement dans la commande :
 	
 	\begin{lstlisting}
 		# Utiliser Akash (par defaut, economique)
-		hpc run vsearch --input data.fasta --cloud akash
+		zest run vsearch --input data.fasta --cloud akash
 		
 		# Utiliser AWS pour job critique necessite SLA 99.99%
-		hpc run blast --input proteins.fasta --cloud aws --instance-type c5.4xlarge
+		zest run blast --input proteins.fasta --cloud aws --instance-type c5.4xlarge
 		
 		# Utiliser HPC traditionnel pour GPU haute perf
-		hpc run deeplearning --input train.tar --cloud slurm --partition gpu
+		zest run deeplearning --input train.tar --cloud slurm --partition gpu
 	\end{lstlisting}
 	
 	\subsubsection{Selection Backend : Par profil utilisateur}
@@ -581,8 +606,8 @@
 	
 	Avantages :
 	\begin{itemize}
-		\item \textbf{Flexibilite} : Scientifique choisit meilleur cloud par cas d'usage
-		\item \textbf{Optimisation couts} : Akash par defaut pour jobs standards, AWS pour critiques
+		\item \textbf{Flexibilité} : Scientifique choisit le meilleur cloud par cas d'usage
+		\item \textbf{Optimisation couts} : Akash par défaut pour jobs standards, OVH ou autres acteurs centralisés pour critiques
 		\item \textbf{Pas de re-apprentissage} : Syntaxe CLI reste identique
 	\end{itemize}
 	
@@ -616,7 +641,7 @@
 		\item Jobs CPU/GPU standards (non-critique)
 		\item Workloads bioinformatique (vsearch, BLAST, SAMtools)
 		\item Geospatial processing avec GDAL/QGIS
-		\item Recherche academique (budget constraints)
+		\item Recherche académique (budget contraints)
 		\item Development et experimentation (prototypage)
 	\end{itemize}
 	
@@ -631,20 +656,19 @@
 	
 	\textbf{Ideal pour :}
 	\begin{itemize}
-		\item Universites/Labos avec infrastructure interne
-		\item Workloads MPI paralleles massifs
-		\item Donnees sensibles on-premise
-		\item Integration pipelines HPC existants
+		\item Universités/Labos avec infrastructure interne
+		\item Workloads MPI parallèles massifs
+		\item Données sensibles on-premise
+		\item Intégration pipelines HPC existants
 	\end{itemize}
 	
-	\subsubsection{SecNumCloud : Donnees francaises regulees}
+	\subsubsection{SecNumCloud : Donnees francaises regulées}
 	
 	\textbf{Ideal pour :}
 	\begin{itemize}
-		\item CNES : Donnees spatiales classification defense
 		\item Entites publiques : Conformite cloud souverain francais
-		\item Biotech pharma : Donnees patients confidentielles
-		\item Infrastructure 100\% France hebergement garantis
+		\item Biotech pharma : Données patients confidentielles
+		\item Infrastructure 100\% France hébegement garantis
 	\end{itemize}
 	
 	\newpage
@@ -659,8 +683,8 @@
 	\begin{itemize}
 		\item Code source MIT licence
 		\item Installation locale : pip install hpc-flow
-		\item Utilisation illimitee (couts infra a charge utilisateur)
-		\item Contributions communaute bienvenues
+		\item Utilisation illimitée (couts infra a charge utilisateur)
+		\item Contributions de la communauté bienvenues
 	\end{itemize}
 	
 	\subsection{Service Manage (Payant / SaaS)}
@@ -669,13 +693,13 @@
 	
 	\begin{itemize}
 		\item \textbf{Gestion multi-utilisateurs} : Teams, projets, quotas
-		\item \textbf{Historique et monitoring} : Jobs, logs, duree, couts
+		\item \textbf{Historique et monitoring} : Jobs, logs, durée, couts
 		\item \textbf{Dashboard web} : Lancement jobs, suivi, resultats
 		\item \textbf{Integration API} : Appels programmatiques
 		\item \textbf{Support technique} : SLA garanti
 	\end{itemize}
 	
-	\keypoint{Tarification estimee (Phase 3)}{Modele freemium : gratuit jusqu'a X jobs/mois, puis tarification a l'usage ou abonnement institutional.}
+	\keypoint{Tarification estimée (Phase 3)}{Modele freemium : gratuit jusqu'a X jobs/mois, puis tarification a l'usage ou abonnement institutionel.}
 	
 	\newpage
 	
@@ -689,13 +713,13 @@
 	\textbf{Objectif :} CLI fonctionnelle + backend Akash + 2-3 outils de demo.
 	
 	\begin{itemize}
-		\item[$\checkmark$] Architecture generique JobRunner
-		\item[$\checkmark$] Implementation AkashJobRunner
+		\item[$\checkmark$] Architecture génerique JobRunner
+		\item[$\checkmark$] Implémentation AkashJobRunner
 		\item[$\checkmark$] CLI parsing et JobSpec
 		\item[$\checkmark$] Tool registry (vsearch, geoprocess)
 		\item[$\checkmark$] File transfer (upload/download)
 		\item[$\checkmark$] Script execution (Python)
-		\item[\,-] Demonstration POC (bioinformatique + geospatial)
+		\item[\,-] Démonstration POC (bioinformatique + geospatial)
 	\end{itemize}
 	
 	\textbf{Timeline :} 2-3 mois
@@ -707,9 +731,9 @@
 	\begin{itemize}
 		\item[\,-] Outils additionnels (BLAST, SAMtools, GDAL complets)
 		\item[\,-] Runtimes script : Bash, R, Julia
-		\item[\,-] Job history local (hpc log, hpc history)
-		\item[\,-] AWSJobRunner implementation
-		\item[\,-] SlurmJobRunner implementation
+		\item[\,-] Job history local (zest log, zest history)
+		\item[\,-] AWSJobRunner implémentation
+		\item[\,-] SlurmJobRunner implémentation
 		\item[\,-] Config file support (\textasciitilde/.hpc/config.yaml)
 		\item[\,-] Cloud selection logic
 		\item[\,-] Error handling robuste
@@ -725,28 +749,28 @@
 		\item[\,-] Web app / dashboard
 		\item[\,-] User et project management
 		\item[\,-] GCPJobRunner implementation
-		\item[\,-] SecNumCloud integration (partnership)
+		\item[\,-] SecNumCloud intégration (partnership)
 		\item[\,-] Azure support
 		\item[\,-] API REST
 		\item[\,-] Pricing engine (cost estimation)
 		\item[\,-] Advanced resource prediction
 	\end{itemize}
 	
-	\textbf{Timeline :} 4-6 mois apres Phase 2
+	\textbf{Timeline :} 4-6 mois après Phase 2
 	
 	\newpage
 	
 	% ============================================================
 	% SECTION 8 : AVANTAGES COMPETITIFS
 	% ============================================================
-	\section{Avantages Competitifs}
+	\section{Avantages Compétitifs}
 	
 	\begin{table}[H]
 		\centering
 		\small
 		\begin{tabularx}{\linewidth}{l | c | c | c}
 			\toprule
-			\textbf{Critere} & \textbf{HPC Flow} & \textbf{Cloud classique} & \textbf{HPC trad.} \\
+			\textbf{Critère} & \textbf{zest} & \textbf{Cloud classique} & \textbf{HPC trad.} \\
 			\midrule
 			Pas Docker/VM requis & $\checkmark$ & $\times$ & $\times$ \\
 			Interface tool-centric & $\checkmark$ & $\times$ & $\times$ \\
@@ -771,26 +795,26 @@
 	\subsection{CNES (Centre National Etudes Spatiales)}
 	
 	\begin{itemize}
-		\item \textbf{Defi} : Traitement massif de donnees geospatiales (satellites), infrastructure couteuse, souverainete donnees
-		\item \textbf{Apport HPC Flow} : Execution pipelines geospatial sur Akash ou SecNumCloud (economies + souverainete), API extensible, pas de lock-in fournisseur
-		\item \textbf{Cas d'usage} : Analyse DEM, detection objets, classification satellite
+		\item \textbf{Défi} : Traitement massif de données géospatiales (satellites), infrastructure coûteuse, souveraineté données
+		\item \textbf{Apport zest} : Exécution pipelines géospatial sur Akash ou SecNumCloud (économies + souveraineté), API extensible, pas de lock-in fournisseur
+		\item \textbf{Cas d'usage} : Analyse DEM, détection objets, classification satellite
 		\item \textbf{Gain economique} : -60\% couts compute vs AWS avec Akash
 	\end{itemize}
 	
 	\subsection{Aix-Marseille Universite}
 	
 	\begin{itemize}
-		\item \textbf{Defi} : Chercheurs heterogenes, pas d'equipe infra dediee, couts cloud eleves
-		\item \textbf{Apport HPC Flow} : Outil simple pour tous, auto-heberge ou sur Akash, pas d'administration
-		\item \textbf{Cas d'usage} : Bioinformatique, chimie quantique, geospatial, analyses data science
-		\item \textbf{Gain} : Democratisation acces HPC, reduction charge IT
+		\item \textbf{Defi} : Chercheurs hétèrogènes, pas d'équipe infra dédiée, couts cloud élevés
+		\item \textbf{Apport HPC Flow} : Outil simple pour tous, auto-hébergé ou sur Akash, pas d'administration
+		\item \textbf{Cas d'usage} : Bioinformatique, chimie quantique, géospatial, analyses data science
+		\item \textbf{Gain} : Démocratisation accès HPC, réduction charge IT
 	\end{itemize}
 	
 	\subsection{CMA CGM (Logistique Maritime)}
 	
 	\begin{itemize}
-		\item \textbf{Defi} : Optimisation trajets, predictions, besoin compute on-demand sans over-capacity
-		\item \textbf{Apport HPC Flow} : Integration facile dans pipelines data, scaling elastique, couts proportionnels, choix cloud (Akash ou intégration interne)
+		\item \textbf{Defi} : Optimisation trajets, prédictions, besoin compute on-demand sans over-capacity
+		\item \textbf{Apport zest} : Intégration facile dans pipelines data, scaling élastique, coûts proportionnels, choix cloud (Akash ou intégration interne)
 		\item \textbf{Cas d'usage} : Analyse relief (trajets marins), prédictions météo, optimisation routes
 		\item \textbf{Gain} : Flexibilité coûts, pas d'over-provisioning
 	\end{itemize}
@@ -799,7 +823,7 @@
 	
 	\begin{itemize}
 		\item \textbf{Defi} : Augmenter adoption compute decentralisé, proposer outils hauts niveaux
-		\item \textbf{Apport HPC Flow} : Killer app pour scientifiques, abstraire complexite Akash, bootstrap communaute scientifique
+		\item \textbf{Apport HPC Flow} : Killer app pour scientifiques, abstraire complexité Akash, bootstrap communauté scientifique
 		\item \textbf{Synergies} : Co-marketing, intégration Akash API, case studies communs, accélération providers adoption
 	\end{itemize}
 	
@@ -840,20 +864,20 @@
 	
 	\begin{enumerate}
 		\item \textbf{Simplicité} : Une commande pour tout. Pas Docker, pas VM, pas de tracas.
-		\item \textbf{Flexibilite} : Open-source, extensible, multi-cloud par architecture.
-		\item \textbf{Decentralisation} : Akash Network comme premier backend, autres possibles.
-		\item \textbf{Economies} : 60-80\% reduction couts compute vs cloud centralisé (Akash Phase 1).
-		\item \textbf{Communaute} : Registry contributif, MIT licence, contributions bienvenues.
+		\item \textbf{Flexibilité} : Open-source, extensible, multi-cloud par architecture.
+		\item \textbf{Décentralisation} : Akash Network comme premier backend, autres possibles.
+		\item \textbf{Economies} : 60-80\% réduction couts compute vs cloud centralisé (Akash Phase 1).
+		\item \textbf{Communauté} : Registry contributif, MIT licence, contributions bienvenues.
 		\item \textbf{Modele durable} : CLI gratuite + SaaS optionnel.
 		\item \textbf{Multi-cloud} : Jamais enfermé. Eviter lock-in fournisseur.
 	\end{enumerate}
 	
-	\subsection{Prochaines etapes}
+	\subsection{Prochaines étapes}
 	
 	\begin{itemize}
 		\item Phase 1 : POC fonctionnel Akash (fin Q2 2024)
 		\item Partenariats : CNES, Aix-Marseille, Akash Network
-		\item Publication + presentation conferences scientifiques (JRES, ADP)
+		\item Publication + présentation conférences scientifiques (JRES, ADP)
 		\item Recrutement contributeurs open-source
 		\item Phase 2 : Multi-cloud (AWS, Slurm) fin Q4 2024
 	\end{itemize}
@@ -879,16 +903,16 @@
 	
 	\begin{tabularx}{\linewidth}{l X}
 		\toprule
-		\textbf{Terme} & \textbf{Definition} \\
+		\textbf{Terme} & \textbf{Définition} \\
 		\midrule
 		\textbf{HPC} & High Performance Computing - Calcul haute performance \\
-		\textbf{Akash Network} & Marche decentralise peer-to-peer de ressources computationnelles blockchain \\
+		\textbf{Akash Network} & Marché décentralisé peer-to-peer de ressources computationnelles blockchain \\
 		\textbf{CLI} & Command-Line Interface - Interface en ligne de commande \\
 		\textbf{JobSpec} & Specification structuree d'un job (outil, args, fichiers, ressources) \\
 		\textbf{JobRunner} & Abstraction pour soumettre jobs a un backend (Akash, AWS, Slurm) \\
-		\textbf{Registry} & Catalogue de definitions d'outils \\
+		\textbf{Registry} & Catalogue de définitions d'outils \\
 		\textbf{POC} & Proof of Concept - Validation technique d'un concept \\
-		\textbf{YAML} & Format texte lisible pour donnees structurees \\
+		\textbf{YAML} & Format texte lisible pour données structurees \\
 		\textbf{API} & Application Programming Interface - Interface programmation \\
 		\textbf{SLA} & Service Level Agreement - Accord niveau service \\
 		\textbf{P2P} & Peer-to-Peer - Architecture distribuée sans intermédiaire central \\

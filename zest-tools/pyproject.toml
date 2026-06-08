@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zest-tools"
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = ["click"]
+
+[project.scripts]
+zest = "zest:cli"  # ← nom_du_fichier:nom_de_la_fonction
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]  # ← dis à hatchling où chercher

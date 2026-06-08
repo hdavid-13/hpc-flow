@@ -27,21 +27,22 @@
 \contentsline {subsection}{\numberline {5.1}Qu'est-ce qu'Akash Network ?}{10}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Pourquoi Akash Network ?}{10}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Avantages distinctifs}{10}{subsubsection.5.2.1}%
-\contentsline {paragraph}{1. Decentralisation et Souveraineté}{10}{paragraph*.1}%
+\contentsline {paragraph}{1. Décentralisation et Souveraineté}{10}{paragraph*.1}%
 \contentsline {paragraph}{2. Economies d'echelle}{10}{paragraph*.2}%
 \contentsline {paragraph}{3. Absence de lock-in}{10}{paragraph*.3}%
 \contentsline {paragraph}{4. Marche ouvert}{10}{paragraph*.4}%
 \contentsline {subsection}{\numberline {5.3}Limitations actuelles d'Akash et trajectoire}{11}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Limitations presentes}{11}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Developpements planifies Akash (roadmap 2024-2025)}{11}{subsubsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.4}Strategie Multi-Cloud et Selection Backend}{12}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.3.2}Développements planifiés Akash (roadmap 2025-2026)}{11}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Akash HomeNode - MVP : Vers une science participative décentralisée}{11}{subsubsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.4}Stratégie Multi-Cloud et Selection Backend}{12}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Selection Backend : Par commande}{12}{subsubsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Selection Backend : Par profil utilisateur}{12}{subsubsection.5.4.2}%
 \contentsline {subsubsection}{\numberline {5.4.3}Backends planifies}{12}{subsubsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.5}Cas d'usage par backend}{13}{subsection.5.5}%
 \contentsline {subsubsection}{\numberline {5.5.1}Akash : Jobs scientifiques standards}{13}{subsubsection.5.5.1}%
 \contentsline {subsubsection}{\numberline {5.5.2}HPC Traditionnel (Slurm) : Institutions}{13}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3}SecNumCloud : Donnees francaises regulees}{13}{subsubsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.3}SecNumCloud : Donnees francaises regulées}{13}{subsubsection.5.5.3}%
 \contentsline {section}{\numberline {6}Modele Economique}{14}{section.6}%
 \contentsline {subsection}{\numberline {6.1}CLI Open-Source (Gratuit)}{14}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Service Manage (Payant / SaaS)}{14}{subsection.6.2}%
@@ -49,7 +50,7 @@
 \contentsline {subsection}{\numberline {7.1}Phase 1 --- MVP / POC (En cours)}{15}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Phase 2 --- Hardening et Multi-Cloud}{15}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Phase 3 --- Managed Layer et Multi-Cloud}{15}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Avantages Competitifs}{16}{section.8}%
+\contentsline {section}{\numberline {8}Avantages Compétitifs}{16}{section.8}%
 \contentsline {section}{\numberline {9}Impact pour les Acteurs Cibles}{17}{section.9}%
 \contentsline {subsection}{\numberline {9.1}CNES (Centre National Etudes Spatiales)}{17}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Aix-Marseille Universite}{17}{subsection.9.2}%
@@ -58,6 +59,6 @@
 \contentsline {section}{\numberline {10}Risques et Mitigation}{18}{section.10}%
 \contentsline {section}{\numberline {11}Conclusion}{19}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Forces cles}{19}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Prochaines etapes}{19}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.2}Prochaines étapes}{19}{subsection.11.2}%
 \contentsline {section}{\numberline {A}Glossaire Technique}{20}{appendix.A}%
 \contentsline {section}{\numberline {B}References}{20}{appendix.B}%
