@@ -1,0 +1,65 @@
+\contentsline {section}{\numberline {1}Executive Summary}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The Problem}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}The Solution}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Benefits for Researchers and Enterprises}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}For Researchers}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}For Enterprises}{4}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}For the Global Scientific Community}{5}{subsubsection.1.3.3}%
+\contentsline {section}{\numberline {2}Technical Architecture}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Overview}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Key Components}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}1. CLI Layer}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}2. JobSpec Definition}{6}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}3. JobRunner Abstraction}{7}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}4. Backend Implementations}{7}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}5. Custom Script Execution}{7}{subsubsection.2.2.5}%
+\contentsline {section}{\numberline {3}Execution Workflow}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Flow of a \texttt {hpc run} Command}{8}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Target Use Cases}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bioinformatics}{9}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Sequence Analysis (CNES, Universities)}{9}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}BLAST / Alignment (Biotech, University)}{9}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Geospatial}{9}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}DEM Raster Processing (CNES, CMA CGM Logistics)}{9}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Custom Scripts}{9}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Proprietary Data Analysis}{9}{subsubsection.4.3.1}%
+\contentsline {section}{\numberline {5}Akash Network: Primary Backend and Multi-Cloud Strategy}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}What is Akash Network?}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Why Akash for Scientific Computing?}{10}{subsection.5.2}%
+\contentsline {paragraph}{1. Decentralization and Sovereignty}{10}{paragraph*.1}%
+\contentsline {paragraph}{2. Cost Efficiency}{10}{paragraph*.2}%
+\contentsline {paragraph}{3. No Vendor Lock-in}{10}{paragraph*.3}%
+\contentsline {paragraph}{4. Open Market}{10}{paragraph*.4}%
+\contentsline {subsection}{\numberline {5.3}Akash Network Current Limitations and Roadmap}{10}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Akash HomeNode - MVP: Towards Decentralized Participatory Science}{11}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.4}Multi-Cloud Strategy and Backend Selection}{12}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Backend Selection: Per Command}{12}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Backend Selection: Per User Profile}{12}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Target Infrastructures}{13}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Akash Network}{13}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}AWS}{13}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Traditional HPC (Slurm)}{13}{subsubsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.4}SecNumCloud}{13}{subsubsection.5.5.4}%
+\contentsline {section}{\numberline {6}Business Model}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Open-Source CLI (Free)}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Managed Service (Paid / SaaS)}{14}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Status and Roadmap}{15}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Phase 1 --- MVP / POC (Ongoing)}{15}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Phase 2 --- Hardening and Multi-Cloud}{15}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Phase 3 --- Managed Layer and Multi-Cloud}{15}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Competitive Advantages}{16}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Comparison with Alternatives}{16}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}vs. Classic Cloud Providers (AWS, GCP, Azure)}{16}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}vs. Traditional HPC}{16}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}vs. Other Scientific Computing Platforms}{16}{subsubsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.2}Target Organizations}{16}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}French National Centre for Space Studies (CNES)}{16}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Aix-Marseille University}{17}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}CMA CGM (Maritime Logistics)}{17}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Akash Network}{17}{subsubsection.8.2.4}%
+\contentsline {section}{\numberline {9}Risks and Mitigation}{18}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{19}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Key Strengths}{19}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Next Steps}{19}{subsection.10.2}%
+\contentsline {section}{\numberline {A}Technical Glossary}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}References}{20}{appendix.B}%
