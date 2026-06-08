@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloade
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PresentationEN.tex
-(./PresentationEN.tex
+**presentation.tex
+(./presentation.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -685,8 +685,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count323
 \l__pdf_internal_box=\box71
 )
-(./PresentationEN.aux)
-\openout1 = `PresentationEN.aux'.
+(./presentation.aux)
+\openout1 = `presentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
 LaTeX Font Info:    ... okay on input line 104.
@@ -765,48 +765,51 @@ e
 ))
 Package hyperref Info: Link coloring OFF on input line 104.
 
-(./PresentationEN.out) (./PresentationEN.out)
+(./presentation.out) (./presentation.out)
 \@outlinefile=\write4
-\openout4 = `PresentationEN.out'.
+\openout4 = `presentation.out'.
 
 \c@lstlisting=\count330
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-t1.enc}] (./PresentationEN.toc
+dvips/cm-super/cm-super-t1.enc}]
+(./presentation.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [2])
+\tf@toc=\write5
+\openout5 = `presentation.toc'.
+
+ [3]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-7.
+87.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [2])
-\tf@toc=\write5
-\openout5 = `PresentationEN.toc'.
-
- [3] [4{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5] [6
+) [4{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 263.
+ [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.291 		def 
-            submit(self, job_spec: JobSpec) -> str:]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 334.
- [7]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 350.
- [8] [9]
-Underfull \hbox (badness 10000) in alignment at lines 476--476
+l.296 	\end{lstlisting}
+                       ] [7] [8] [9]
+Overfull \hbox (8.64676pt too wide) in paragraph at lines 452--453
+[]\T1/cmr/m/n/10 Akash Net-work est une mar-ket-place dé-cen-tral-isée de resso
+urces cloud basée sur la tech-nolo-gie blockchain.
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 484--484
 [][][][] 
  []
 
@@ -815,48 +818,59 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.509 		
-        ] [11] [12] [13] [14] [15]
-Underfull \hbox (badness 10000) in alignment at lines 742--742
+l.507 	\subsubsection{Limitations presentes}
+                                            ] [11] [12] [13] [14] [15]
+Underfull \hbox (badness 10000) in alignment at lines 784--784
 [][][][] 
  []
 
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 831--831
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.788 	\newpage
+               ] [17]
+Underfull \hbox (badness 4303) in paragraph at lines 851--851
+[]|\T1/cmr/m/n/10 POC pub-lic + dé-mos,
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 851--851
+[]|\T1/cmr/m/n/10 Trop d'outils, mau-vaise main-te-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 []|\T1/cmr/m/n/10 S3 URLs, stream-ing,
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 831--831
-[]|\T1/cmr/m/n/10 Uniform Jo-bRun-ner ab-
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 831--831
+Underfull \hbox (badness 10000) in alignment at lines 851--851
 [][][] 
  []
 
 [18] [19]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 902--903
+Overfull \hbox (17.0pt too wide) in paragraph at lines 922--923
 [][] 
  []
 
-[20] (./PresentationEN.aux)
+[20] (./presentation.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `PresentationEN.out' has not changed.
-(rerunfilecheck)             Checksum: 860A91FDFD6BFF501D69B94B8A67F9FA;11631.
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 9EAA039F40AC971CAB1A562B28C77280;11972.
  ) 
 Here is how much of TeX's memory you used:
- 23586 strings out of 476153
- 419295 string characters out of 5794326
- 2073975 words of memory out of 5000000
- 45018 multiletter control sequences out of 15000+600000
- 571653 words of font info for 62 fonts, out of 8000000 for 9000
+ 23578 strings out of 476153
+ 419070 string characters out of 5794326
+ 2077975 words of memory out of 5000000
+ 45020 multiletter control sequences out of 15000+600000
+ 571340 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,15n,87p,473b,1972s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,87p,493b,1246s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/t
@@ -867,12 +881,11 @@ pe1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-fti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on PresentationEN.pdf (20 pages, 352742 bytes).
+fti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on presentation.pdf (20 pages, 336962 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 586 compressed objects within 6 object streams
- 200 named destinations out of 1000 (max. 500000)
- 501 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 568 compressed objects within 6 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 493 words of extra memory for PDF output out of 10000 (max. 10000000)
 
