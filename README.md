@@ -1,4 +1,5 @@
-# hpc-flow
+# zest
+*In Developement*
 
 > Launch scientific tools and scripts on remote HPC/cloud infrastructure with a single command. No Docker. No VM. No hassle.
 
@@ -9,9 +10,9 @@
 
 ---
 
-## What is hpc-flow?
+## What is zest?
 
-**hpc-flow** is an open source CLI tool that lets researchers run scientific tools and scripts on remote compute infrastructure (starting with [Akash Network](https://akash.network)) using a single command.
+**zest** is an open source CLI tool that lets researchers run scientific tools and scripts on remote compute infrastructure (starting with [Akash Network](https://akash.network)) using a single command.
 
 It handles everything automatically:
 
@@ -25,7 +26,7 @@ The researcher only needs to prepare their files and type one command.
 
 ---
 
-## Why hpc-flow?
+## zest?
 
 Running scientific workloads on remote infrastructure typically requires:
 
@@ -51,14 +52,14 @@ cd hpc-flow
 pip install -e .
 
 # Run a bioinformatics tool on Akash
-hpc run vsearch \
+zest run vsearch \
   --input reads.fasta \
   --id 0.97 \
   --output centroids.fasta \
   --cloud akash
 
 # Run a custom script
-hpc run-script analyse.py \
+zest run-script analyse.py \
   --runtime python:3.11 \
   --input data.tsv \
   --output result.csv \
@@ -72,7 +73,7 @@ hpc run-script analyse.py \
 ### Bioinformatics — sequence analysis with vsearch
 
 ```bash
-hpc run vsearch \
+zest run vsearch \
   --input reads.fasta \
   --id 0.97 \
   --threads 8 \
@@ -83,7 +84,7 @@ hpc run vsearch \
 ### Geospatial — slope calculation from a DEM raster
 
 ```bash
-hpc run geoprocess \
+zest run geoprocess \
   --input dem.tif \
   --operation slope \
   --output slope.tif \
@@ -93,7 +94,7 @@ hpc run geoprocess \
 ### Custom script — Python analysis with dependencies
 
 ```bash
-hpc run-script analyse.py \
+zest run-script analyse.py \
   --runtime python:3.11 \
   --input data.tsv \
   --output result.csv \
@@ -108,7 +109,7 @@ hpc run-script analyse.py \
 Researcher's machine                Remote infrastructure (Akash)
 ─────────────────────               ──────────────────────────────
 
-  hpc run vsearch ...
+  zest run vsearch ...
         │
         ▼
   ┌─────────────┐
@@ -145,7 +146,7 @@ Researcher's machine                Remote infrastructure (Akash)
 
 | Feature | Status |
 |---|---|
-| Unified CLI (`hpc run`, `hpc run-script`) | 🔄 In progress |
+| Unified CLI (`zest run`, `zest run-script`) | 🔄 In progress |
 | Tool registry (vsearch, geoprocess, ...) | 🔄 In progress |
 | Akash Network backend | 🔄 In progress |
 | Automatic file transfer (input/output) | 🔄 In progress |
@@ -162,7 +163,7 @@ Researcher's machine                Remote infrastructure (Akash)
 
 ### 1. CLI layer
 
-The `hpc` binary installed on the researcher's machine. It parses commands, loads tool definitions, prepares the `JobSpec`, and communicates with the backend.
+The `zest` binary installed on the researcher's machine. It parses commands, loads tool definitions, prepares the `JobSpec`, and communicates with the backend.
 
 ### 2. Tool registry
 
@@ -270,7 +271,7 @@ Two supported modes:
 
 ## Positioning
 
-| | hpc-flow | Classic cloud (AWS, GCP) | Traditional HPC (Slurm, PBS) |
+| | zest | Classic cloud (AWS, GCP) | Traditional HPC (Slurm, PBS) |
 |---|---|---|---|
 | No Docker/VM knowledge needed | ✅ | ❌ | ❌ |
 | Tool-centric interface | ✅ | ❌ | ❌ |
@@ -318,8 +319,6 @@ MIT License — see [LICENSE](./LICENSE) for details.
 
 ## Contact & Links
 
-- Repository: [github.com/your-org/hpc-flow](https://github.com/your-org/hpc-flow)
-- Issues: [github.com/your-org/hpc-flow/issues](https://github.com/your-org/hpc-flow/issues)
 - Akash Network: [akash.network](https://akash.network)
 
 ---
@@ -327,16 +326,16 @@ MIT License — see [LICENSE](./LICENSE) for details.
 ## FAQ
 
 **Can researchers run their own scripts?**  
-Yes. hpc-flow supports both packaged tools (from the registry) and custom scripts provided by the researcher.
+Yes. zest supports both packaged tools (from the registry) and custom scripts provided by the researcher.
 
 **Do users need to know Docker?**  
 No. The goal is to hide all container and infrastructure complexity from the end user.
 
-**Is hpc-flow locked to Akash?**  
+**Is zest locked to Akash?**  
 No. The architecture is built around a generic `JobRunner` interface. New backends (AWS, GCP, Slurm, etc.) can be added as adapters.
 
 **What file formats are supported?**  
-Any file format. hpc-flow transfers files as-is. The tool or script running remotely determines what formats it accepts.
+Any file format. zest transfers files as-is. The tool or script running remotely determines what formats it accepts.
 
 **Can I add my own tool to the registry?**  
 Yes. Tools are described in simple YAML files. Contributions to the registry are welcome via pull request.
